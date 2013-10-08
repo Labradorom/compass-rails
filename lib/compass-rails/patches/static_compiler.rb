@@ -1,4 +1,4 @@
-if CompassRails.rails4?
+if CompassRails.rails4? || CompassRails.rails41?
   module Sprockets
     class SassTemplate < Tilt::Template
       def evaluate(context, locals, &block)
