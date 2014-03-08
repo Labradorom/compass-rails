@@ -40,7 +40,7 @@ module CompassRails
 
       def screen_file
         case version
-        when RAILS_3_1, RAILS_3_2, RAILS_4_0, RAILS_4_1
+        when RAILS_3_1, RAILS_3_2, RAILS_4_0, RAILS_4_1, RAILS_4_2
           return directory.join('app', 'assets', 'stylesheets', 'screen.css.scss')
         when RAILS_2, RAILS_3
           return directory.join('app', 'assets', 'stylesheets','screen.scss')
@@ -83,7 +83,7 @@ module CompassRails
 
       def runner(string)
         case version
-        when RAILS_3_1, RAILS_3, RAILS_3_2, RAILS_4_0, RAILS_4_1
+        when RAILS_3_1, RAILS_3, RAILS_3_2, RAILS_4_0, RAILS_4_1, RAILS_4_2
           rails_command(['runner', "'#{string}'"], version)
         when RAILS_2
           run_command("script/runner '#{string}'", GEMFILES[version])
@@ -116,7 +116,7 @@ module CompassRails
       ## GEM METHODS
 
       def configure_for_bundler!
-        return if [RAILS_3_1, RAILS_3, RAILS_3_2, RAILS_4_0, RAILS_4_1].include?(version)
+        return if [RAILS_3_1, RAILS_3, RAILS_3_2, RAILS_4_0, RAILS_4_1, RAILS_4_2].include?(version)
         bundle = <<-BUNDLER
         class Rails::Boot
           def run

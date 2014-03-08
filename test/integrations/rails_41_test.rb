@@ -1,7 +1,7 @@
 require 'test_helper'
-class Rails41Test < Test::Unit::TestCase
+class Rails42Test < Test::Unit::TestCase
   include CompassRails::Test::RailsHelpers
-  RAILS_VERSION = RAILS_4_1
+  RAILS_VERSION = RAILS_4_2
 
   def test_rails_app_created
     within_rails_app('test_railtie', RAILS_VERSION) do |project|
