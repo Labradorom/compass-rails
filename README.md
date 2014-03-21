@@ -1,3 +1,7 @@
+# OBSOLETE
+
+We are no longer using this fork, and recommend that you do not either. compass-rails 1.1.7 works fine in Rails 4.1/4.2.
+
 # CompassRails
 
 Compass rails is an adapter for the [Compass Stylesheet Authoring
